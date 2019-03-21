@@ -1,0 +1,43 @@
+server:
+  port: 8010
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gotrip_user_db?useUnicode=true&characterEncoding=utf-8
+    userName: root
+    password: 123456
+  redis:
+    host: 188.131.186.195
+    password: yuntuzhilian
+  dubbo:
+    appname: user-provider
+    registry: zookeeper://127.0.0.1:2181
+    port: 28801
+
+
+  mail:
+    host: smtp.qq.com
+    username: 2225027081@qq.com
+    password: rtwrlwxdftgeebga
+    default-encoding: utf-8
+
+
+
+
+
+mybatis:
+  mapper-locations: mapper-xml/*Mapper.xml
+
+
+logging:
+  level:
+    com.ytzl.gotrip.mapper: debug
+
+#容联短信配置
+sms:
+  serviceIP: app.cloopen.com
+  servicePort: 8883
+  accountSId: 8a216da8697b802901697ef4e13d00b2
+  accountToken: 627e8ff8632e4fc1be3f07d68bce04f5
+  appId: 8a216da8697b802901697ef4e1b200b9

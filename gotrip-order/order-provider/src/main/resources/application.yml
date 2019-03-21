@@ -1,0 +1,22 @@
+server:
+  port: 8030
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gotrip_order_db?useUnicode=true&characterEncoding=utf-8
+    userName: root
+    password: 123456
+  redis:
+    host: 188.131.186.195
+    password: yuntuzhilian
+  dubbo:
+    appname: order-provider
+    registry: zookeeper://127.0.0.1:2181
+    port: 28802
+
+mybatis:
+  mapper-locations: mapper-xml/*Mapper.xml
+logging:
+  level:
+    com.ytzl.gotrip.mapper: debug

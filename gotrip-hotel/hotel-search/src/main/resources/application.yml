@@ -1,0 +1,8 @@
+server:
+  port: 8021
+
+swagger:
+  basePackage: com.ytzl.gotrip.controller
+  title: 搜索API接口
+solr:
+  url: http://localhost:8080/solr/hotel
